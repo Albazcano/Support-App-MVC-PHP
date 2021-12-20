@@ -66,11 +66,18 @@ class RequestController {
     public function update($id,$data)
     {
         // Utilizando static method
-        // RequestModel::update($id,$data);
-
+        RequestModel::update($id,$data);
+        $this->index();
         // Utilizando public method
-        $request = new RequestModel($data['topic'],$data['description'],$data['user_name'],$id);
-        $request->update();
+        // $request = new RequestModel($data['topic'],$data['description'],$data['user_name'],$id);
+        // $request->update();
+    }
+
+    public function delete($id)
+    {
+        RequestModel::update($id);
+        $this->index();
+        return View('Home');
     }
 
 }

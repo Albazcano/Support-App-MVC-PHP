@@ -145,20 +145,31 @@ class RequestModel {
         }
     }
 
-    // static function update($id, $data) : void
-    // {
-    //     try {
-    //         $database = new MysqlConnection;
-    //         $database->mysql->query("UPDATE requests SET topic = '{$data['topic']}',description = '{$data['description']}',user_name = '{$data['user_name']}' WHERE id_request = {$id}");
-    //     }
-    //     catch(PDOException $ex) {
-    //         echo "Error: " . $ex->getMessage();
-    //     }
+    static function update($id, $data) : void
+    {
+        try {
+            $database = new MysqlConnection;
+            $database->mysql->query("UPDATE requests SET topic = '{$data['topic']}',description = '{$data['description']}',user_name = '{$data['user_name']}' WHERE id_request = {$id}");
+        }
+        catch(PDOException $ex) {
+            echo "Error: " . $ex->getMessage();
+        }
 
-    // }
+    }
 
-    public function update()
+   /*  public function update()
     {
         $this->database->mysql->query("UPDATE requests SET topic = '{$this->topic}',description = '{$this->description}',user_name = '{$this->userName}' WHERE id_request = {$this->id}");
+    } */
+
+    public function delete()
+    {
+        try {
+            $database = new MysqlConnection;
+            $database->mysql->query("DELETE FROM requests WHERE id_request = {$this->id}");
+        }
+        catch(PDOException $ex) {
+            echo "Error: " . $ex->getMessage();
+        }
     }
 }

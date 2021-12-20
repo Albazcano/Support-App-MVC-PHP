@@ -28,7 +28,7 @@
                     <td>{$request->getUserName()}</td>
                     <td>{$request->getCreateAt()}</td>
                     <td>
-                        <a href=""><button>Delete</button></a>
+                        <a href="?action=delete&&id_request={$request->getId()}"><button>Delete</button></a>
                     </td>
                     <td>
                         <a href="?action=edit&&id_request={$request->getId()}"><button>Edit</button></a>
