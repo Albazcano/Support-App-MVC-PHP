@@ -37,6 +37,15 @@ class RequestController {
         }
 
         $this->index();
+
+        if(isset($_GET['action']) && $_GET['action'] == 'delete')
+        {
+            $id = $_GET['id_request'];
+            $data = $_GET;
+            $this->delete($id,$data);
+        }
+
+        $this->index();
     }
 
     public function index()
@@ -75,9 +84,8 @@ class RequestController {
 
     public function delete($id)
     {
-        RequestModel::update($id);
+        RequestModel::delete($id);
         $this->index();
-        return View('Home');
     }
 
 }

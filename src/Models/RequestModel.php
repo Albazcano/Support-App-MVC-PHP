@@ -162,11 +162,11 @@ class RequestModel {
         $this->database->mysql->query("UPDATE requests SET topic = '{$this->topic}',description = '{$this->description}',user_name = '{$this->userName}' WHERE id_request = {$this->id}");
     } */
 
-    public function delete()
+    static function delete($id): void
     {
         try {
             $database = new MysqlConnection;
-            $database->mysql->query("DELETE FROM requests WHERE id_request = {$this->id}");
+            $database->mysql->query("DELETE FROM requests WHERE id_request = $id");
         }
         catch(PDOException $ex) {
             echo "Error: " . $ex->getMessage();
