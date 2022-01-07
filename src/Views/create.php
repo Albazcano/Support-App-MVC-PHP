@@ -71,6 +71,7 @@
             
            
             <input type="submit" value="Add">
+            <button type="reset" onclick = "window.location='index.php';">Borrar</button> 
         </form>        
     </section>
 
