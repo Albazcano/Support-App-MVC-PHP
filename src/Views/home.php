@@ -1,86 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/home.css">
-    <title>Base MVC with PHP</title>
-</head>
-
-<style>
-
-    h1 {
-        text-align: center;
-    }
-
-    body {
-        margin: 0 auto;
-        width: 80%;
-        background-color: #DEFCF3;
-    }
-
-    .formulario {
-        margin-top: 20px;
-    }
-      
-    #encabezamiento {
-        background-color: lightgrey;
-        text-align: center;
-        padding: 0.31rem;
-        border: 1px solid black;
-        margin-top: 1.25rem;
-        width: 50%;
-        margin: 3.12rem;
-        border: 1px solid black;
-    }
-
-    th {
-    
-        background-color: lightgrey;
-        text-align: center;
-        padding: 0.5rem;
-        border: 1px solid black;
-    }
-
-    #data {
-        /* font-weight: bold; */
-        border: 1px solid black;
-    }
-
-    #topic {
-        /* font-weight: bold; */
-        border: 1px solid black;
-    }
-    
-    #description {
-        /* font-weight: bold; */
-        border: 1px solid black;
-    }
-    
-    #create {
-        /* font-weight: bold; */
-        border: 1px solid black;
-    }
-
-    #editar {
-        margin-left: 1.25rem;
-        margin-right: 0.75rem;
-    }
-    
-    footer{
-        text-align: center;
-        font-weight: bold;
-        margin-top: 30px;        
-    }
-
-</style>
+<?php include './src/Views/layouts/header.php'; ?>
 <body>
 
     <main>
         
         <h1>Support App</h1>
-        <section>
+        <section id= "newRequest">
             <a href="?action=create">Add request</a>
         </section>
         
@@ -127,3 +51,64 @@
 </body>
 </html>
 
+<style>
+
+    h1 {
+        text-align: center;
+    }
+
+    body {
+        margin-left: 9.37rem; 
+        width: 80%;
+        background-color: #DEFCF3;
+    }
+
+    #newRequest {
+        margin-bottom: 1.25rem;
+    }
+
+    #encabezamiento {
+        background-color: lightgrey;
+        text-align: center;
+        padding: 0.31rem;
+        border: 1px solid black;
+        margin-top: 1.25rem;
+        width: 50%;
+    }
+
+    th {
+    
+        background-color: lightgrey;
+        text-align: center;
+        padding: 0.5rem;
+        border: 1px solid black;
+    }
+
+    #data {        
+        border: 1px solid black;
+    }
+
+    #topic {       
+        border: 1px solid black;
+    }
+    
+    #description {
+        border: 1px solid black;
+    }
+    
+    #create {
+        border: 1px solid black;
+    }
+
+    #editar {
+        margin-left: 1.25rem;
+        margin-right: 0.75rem;
+    }
+    
+    footer{
+        text-align: center;
+        font-weight: bold;
+        margin-top: 1.87rem;        
+    }
+
+</style>
