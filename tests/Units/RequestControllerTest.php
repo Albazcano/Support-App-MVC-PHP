@@ -25,6 +25,5 @@ class RequestControllerTest extends TestCase
 
             $this->assertIsObject($view);
             $this->assertEquals('create', $view->getView());
-        }     
-        
+        }            
 }

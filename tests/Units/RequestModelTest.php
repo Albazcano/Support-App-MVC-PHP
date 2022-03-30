@@ -21,7 +21,5 @@ class RequestModelTest extends TestCase {
         $this->assertEquals("Printer problem", $request->getTopic());
         $this->assertEquals("Impossible print with printer", $request->getDescription());
         $this->assertEquals("giaco", $request->getUserName());
-    }
-    
-
+    }  
 }

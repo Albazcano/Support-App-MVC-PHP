@@ -74,8 +74,5 @@ class RequestIntegrationTest extends TestCase {
         $this->assertEquals($data['topic'], $request[0]->getTopic());
         $this->assertEquals($data['description'], $request[0]->getDescription());
         $this->assertEquals($data['user_name'], $request[0]->getUserName());
-    }
-    
-
-
+    }  
 }
